@@ -5,24 +5,26 @@
 </div>
 
 <h2>Login</h2>
-
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <form [formGroup]="form">
+<form [formGroup]="form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex w-50 justify-content-center">
                 <mat-form-field appearance="fill">
                     <input matInput placeholder="Username">
                     <mat-icon matSuffix>Username</mat-icon>
                     <mat-hint></mat-hint>
                 </mat-form-field>
-
+            </div>
+        <!-- </div> -->
+        <!-- <div class="row"> -->
+            <div class="col-12 d-flex justify-content-center">
                 <mat-form-field appearance="fill">
                     <input matInput placeholder="Password" type="password">
                     <!-- <input matInput placeholder="Password" formControlName="password" type="password"> -->
                     <mat-icon matSuffix fontSet="fa" fontIcon="fa-key"></mat-icon>
                     <mat-hint></mat-hint>
                 </mat-form-field>
-            </form>
+            </div>
         </div>
     </div>
-</div>
+</form>

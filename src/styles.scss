@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
 html, body { height: 100%; }
 body {
     margin: 0;
@@ -36,7 +36,13 @@ mat-card {
 
 
 
+.mat-form-field-flex{
+    background: white!important;
+}
 
+
+
+/* ignore this for now*/
 
 @import '~@angular/material/theming';
 
