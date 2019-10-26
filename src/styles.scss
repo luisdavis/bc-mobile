@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background:#065c96;
+}
 
 h1{
     text-align: center;
@@ -28,4 +32,26 @@ mat-card {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+
+
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+
+$custom-brower-light-primary: mat-palette($mat-indigo);
+$custom-brower-light-accent:  mat-palette($mat-pink, A200, A100, A400);
+
+
+$custom-brower-light-warn:    mat-palette($mat-red);
+
+$custom-brower-light-theme: mat-light-theme($custom-brower-light-primary, $custom-brower-light-accent, $custom-brower-light-warn);
+
+
+.custom-material-brower-light {
+    @include angular-material-theme($custom-brower-light-theme);
 }

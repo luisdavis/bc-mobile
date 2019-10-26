@@ -8,21 +8,34 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
+    //other imports 
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    // material imports
     MatFormFieldModule,
     MatCardModule,
     MatIconModule,
     MatButtonModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
+    MatFormFieldModule,
+    MatInputModule
+    // FormsModule,
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [LoginComponent, HomeComponent]
 })
 export class AppModule { }
