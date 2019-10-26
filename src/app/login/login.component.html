@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
                 <mat-form-field appearance="fill">
-                    <input matInput placeholder="Username">
+                    <input matInput placeholder="Username" formControlName="username" required>
                     <mat-icon matSuffix>Username</mat-icon>
                     <mat-hint></mat-hint>
                 </mat-form-field>
@@ -19,7 +19,7 @@
             <!-- <div class="row"> -->
             <div class="col-12 d-flex justify-content-center">
                 <mat-form-field appearance="fill">
-                    <input matInput placeholder="Password" type="password">
+                    <input matInput placeholder="Password" type="password" formControlName="password" required>
                     <!-- <input matInput placeholder="Password" formControlName="password" type="password"> -->
                     <mat-icon matSuffix fontSet="fa" fontIcon="fa-key"></mat-icon>
                     <mat-hint></mat-hint>
@@ -27,10 +27,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col"><button mat-raised-button color="primary" [routerLink]="['/home']">Login</button></div>
+            <div class="col"><button mat-raised-button color="primary" (click)="validate()">Login</button></div>
         </div>
         <div class="row">
-            <div class="col"><a href="#">Proceed as a Guest user</a></div>
+            <div class="col"><a [routerLink]="['/home']">Proceed as a Guest user</a></div>
         </div>
     </div>
 </form>
