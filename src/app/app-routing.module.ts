@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { MainSharedComponent } from './main-shared/main-shared.component';
 
 
 const routes: Routes = [
@@ -11,12 +12,12 @@ const routes: Routes = [
     component: LoginComponent,
   },
   {
-    path: 'home',
-    component: HomeComponent,
-    // children: [
-    //   { path: '', component: , pathMatch: 'full' },
-
-    // ]
+    path: '',
+    component: MainSharedComponent,
+    children: [
+      // every path added here will have a broward headerwith low opacity and a sidebar
+      { path: 'home', component: HomeComponent, pathMatch: 'full' }, 
+    ]
   }
 ];
 

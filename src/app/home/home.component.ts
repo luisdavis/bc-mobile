@@ -8,9 +8,6 @@ import {MatSidenav} from '@angular/material/sidenav';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
-
-  reason = '';
 
 
   constructor(private router: Router) { }
@@ -18,19 +15,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-
   getUser(){
     return JSON.parse(localStorage.getItem("user")) || 'GUEST USER';
   }
 
-  logout(){
-    //TODO: this functionality should be located globally in a side bar menu by click the hammer
-    localStorage.removeItem('user');
-    this.router.navigate(['/'])
-  }
-
-  close(reason: string) {
-    this.reason = reason;
-    this.sidenav.close();
-  }
 }

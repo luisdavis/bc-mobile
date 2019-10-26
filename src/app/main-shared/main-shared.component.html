@@ -1,0 +1,51 @@
+<mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')">
+    <mat-sidenav-content>
+        <div class="container head">
+            <button mat-icon-button (click)="sidenav.open()" class="hammer">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <img class="seahawk img-responsive img-fluid"
+                src="https://whoopdirt.com/wp-content/uploads/2018/08/Broward_Seahawk_head.png" />
+            <!-- <img class="logo"  src="https://www.broward.edu/_catalogs/masterpage/MasterPages/~sitecollection/_layouts/15/1033/STYLES/BrowardImages/bc_logo.png" /> -->
+            <div class="college-title">
+                <h1>BROWARD COLLEGE</h1>
+                <h4>Home of seahawk</h4>
+            </div>
+        </div>
+
+        <router-outlet></router-outlet>
+
+        <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
+            <div><button mat-button (click)="close()" class="hammer">
+                    <mat-icon>close</mat-icon>
+                </button></div>
+            <nav>
+                <button mat-button (click)="logout()">
+                    <span>Logout</span>
+                    <mat-icon>error_outline</mat-icon>
+                </button>
+                <mat-divider></mat-divider>
+                <button mat-button>
+                    <span>some other thing</span>
+                    <mat-icon></mat-icon>
+                </button>
+                <mat-divider></mat-divider>
+                <button mat-button>
+                    <span>some other thing</span>
+                    <mat-icon></mat-icon>
+                </button>
+                <mat-divider></mat-divider>
+                <button mat-button>
+                    <span>some other thing</span>
+                    <mat-icon></mat-icon>
+                </button>
+                <mat-divider></mat-divider>
+                <button mat-button>
+                    <span>some other thing</span>
+                    <mat-icon></mat-icon>
+                </button>
+                <mat-divider></mat-divider>
+            </nav>
+        </mat-sidenav>
+    </mat-sidenav-content>
+</mat-sidenav-container>
