@@ -28,3 +28,33 @@
 h2{
     color: white;
 }
+
+
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+mat-sidenav{
+    width: 80vw;
+    background-color: #065c96;
+}
+
+.hammer{
+    color: white;
+}
+
+nav button{
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    height: 60px;
+    font-size: 21px;
+    mat-icon{
+        margin-left: 5px;
+    }
+}

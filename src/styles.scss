@@ -35,4 +35,12 @@ $custom-brower-light-theme: mat-light-theme($custom-brower-light-primary, $custo
 
 .custom-material-brower-light {
     @include angular-material-theme($custom-brower-light-theme);
+    .mat-drawer {
+        background: #0491d3;
+    }
+
+    .mat-drawer-container{
+        background-color: none;
+        background-color: transparent;
+    }
 }
