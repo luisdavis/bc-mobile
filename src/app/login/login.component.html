@@ -1,4 +1,4 @@
-<div>
+<div class="container">
     <img class="seahawk" src="https://whoopdirt.com/wp-content/uploads/2018/08/Broward_Seahawk_head.png" />
     <img class="logo"
         src="https://www.broward.edu/_catalogs/masterpage/MasterPages/~sitecollection/_layouts/15/1033/STYLES/BrowardImages/bc_logo.png" />
@@ -8,15 +8,15 @@
 <form [formGroup]="form">
     <div class="container">
         <div class="row">
-            <div class="col-12 d-flex w-50 justify-content-center">
+            <div class="col-12 d-flex justify-content-center">
                 <mat-form-field appearance="fill">
                     <input matInput placeholder="Username">
                     <mat-icon matSuffix>Username</mat-icon>
                     <mat-hint></mat-hint>
                 </mat-form-field>
             </div>
-        <!-- </div> -->
-        <!-- <div class="row"> -->
+            <!-- </div> -->
+            <!-- <div class="row"> -->
             <div class="col-12 d-flex justify-content-center">
                 <mat-form-field appearance="fill">
                     <input matInput placeholder="Password" type="password">
@@ -25,6 +25,12 @@
                     <mat-hint></mat-hint>
                 </mat-form-field>
             </div>
+        </div>
+        <div class="row">
+            <div class="col"><button mat-raised-button color="primary" [routerLink]="['/home']">Login</button></div>
+        </div>
+        <div class="row">
+            <div class="col"><a href="#">Proceed as a Guest user</a></div>
         </div>
     </div>
 </form>
