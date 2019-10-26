@@ -14,9 +14,4 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  getUser(){
-    return JSON.parse(localStorage.getItem("user")) || 'GUEST USER';
-  }
-
 }

@@ -28,4 +28,9 @@ export class MainSharedComponent implements OnInit {
     this.sidenav.close();
   }
 
+  getUser(){
+    return JSON.parse(localStorage.getItem("user")) || 'GUEST USER';
+  }
+
+
 }
